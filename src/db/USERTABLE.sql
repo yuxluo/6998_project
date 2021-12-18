@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS USERTABLE;
 
 CREATE TABLE USERTABLE (
-	uni VARCHAR(20),
-    email VARCHAR(128),
+    uni VARCHAR(20),
+    email VARCHAR(128) PRIMARY KEY,
     gender BOOL,
-	firstname VARCHAR(128),
+    firstname VARCHAR(128),
     lastname VARCHAR(128),
     skill VARCHAR(128)
 );
