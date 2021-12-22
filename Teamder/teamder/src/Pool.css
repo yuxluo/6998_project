@@ -1,0 +1,40 @@
+.Form{
+    min-width: 80%;
+    height: 50vh;
+    border: dotted #2B4E7E 5vw;
+    /* border: 1px solid red; */
+    margin: 0vw;
+    padding: 5vw ;
+    position:relative; 
+    /* position:relative for .prevBtn and .nextBtn position:absolute; */
+}
+
+.Form label{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: #2B4E7E;
+    margin: 0 0 2vh 0;
+    font-weight: 700;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.Form input, textarea{
+    display: block;
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+} 
+
+.Form textarea{
+    height: 15vh;
+} 
+
+.Form button{
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+}
+

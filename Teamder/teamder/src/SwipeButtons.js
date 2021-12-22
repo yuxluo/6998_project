@@ -1,28 +1,35 @@
 import React from 'react'
 import "./SwipeButtons.css"
+import { Link } from "react-router-dom";
 
-import ReplayIcon from '@mui/icons-material/Replay';
-import CloseIcon from '@mui/icons-material/Close';
+import ExposureIcon from '@mui/icons-material/Exposure';
+import EditIcon from '@mui/icons-material/Edit';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import GetAppIcon from '@mui/icons-material/GetApp';
 import FlashOnIcon from '@mui/icons-material/FlashOn';
 import IconButton from '@mui/material/IconButton';
 
 const SwipeButtons = () => {
     return (
         <div className="swipeButtons">
-            <IconButton className="swipeButtons__repeat">
-                <ReplayIcon fontSize="large" />
-            </IconButton>
-            <IconButton className="swipeButtons__left">
-                <CloseIcon fontSize="large" />
-            </IconButton>
+            <Link to={"/PoolInteraction"}>
+                <IconButton className="swipeButtons__repeat">
+                    <ExposureIcon fontSize="large" />
+                </IconButton>
+            </Link>
+            <Link to={"/PutUserInfo"}>
+                <IconButton className="swipeButtons__left">
+                    <EditIcon fontSize="large" />
+                </IconButton>
+            </Link>
             <IconButton className="swipeButtons__star">
                 <StarRateIcon fontSize="large" />
             </IconButton>
-            <IconButton className="swipeButtons__right">
-                <FavoriteIcon fontSize="large" />
-            </IconButton>
+            <Link to={"/GetUserInfo"}>
+                <IconButton className="swipeButtons__right">
+                    <GetAppIcon fontSize="large" />
+                </IconButton>
+            </Link>
             <IconButton className="swipeButtons__lightning">
                 <FlashOnIcon fontSize="large" />
             </IconButton>

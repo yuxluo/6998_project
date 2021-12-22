@@ -5,6 +5,7 @@ import awsconfig from './aws-exports'
 import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
+import './Signin.css';
 Amplify.configure(awsExports);
 Amplify.configure(awsconfig)
 
@@ -14,7 +15,7 @@ function Signin({ signOut }) {
         <Link to={"/signout"}>
             <Authenticator socialProviders={['amazon', 'apple', 'facebook', 'google']}>
                 {({ signOut, user }) => (
-                    <main>
+                    <main className='Signin'>
                         <h1>Hello {user.username}</h1>
                         <button onClick={signOut}>Sign out</button>
                     </main>

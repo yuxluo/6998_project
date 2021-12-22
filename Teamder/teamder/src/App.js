@@ -12,6 +12,10 @@ import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react'
 import Signin from "./Signin";
 import '@aws-amplify/ui-react/styles.css';
 import awsExports from './aws-exports';
+import GetUserInfo from './GetUserInfo';
+import PutUserInfo from './PutUserInfo';
+import Pool from './Pool';
+import cognitoUser from './GetToken';
 Amplify.configure(awsExports);
 
 Amplify.configure(awsconfig)
@@ -29,6 +33,12 @@ function App({ signOut, user }) {
           <Route path="/" element={<><Header />< TeamderCards /><SwipeButtons /></>}>
           </Route>
           <Route path="/signout" element={<><Header /><Signin /></>}>
+          </Route>
+          <Route path="/GetUserInfo" element={<><Header /><GetUserInfo /></>}>
+          </Route>
+          <Route path="/PutUserInfo" element={<><Header /><PutUserInfo /></>}>
+          </Route>
+          <Route path="/PoolInteraction" element={<><Header /><Pool /></>}>
           </Route>
         </Routes>
         {/* Tinder Cards */}
